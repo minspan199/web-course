@@ -1,0 +1,44 @@
+h1{
+    min-height: 500px no-repeat;
+    width: 200px;
+    position: relative;
+    animation-name: anime;
+    animation-delay: 2s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    border: #00bf7a solid 3px;
+}
+
+
+body{
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    border: #a8eb12 solid 3px;
+}
+
+@keyframes anime{
+    0%{
+        background-color: rebeccapurple;
+        left: 10px;
+        top: 10px;
+    }
+    25%{
+        background-color: red;
+        left: 370px;
+        top: 10px;
+    }
+    50%{
+        background-color: green;
+        left: 670px;
+        top: 10px;
+    }
+    75%{
+        background-color: yellow;
+        left: 580px;
+        top: 580px;
+    }
+    100%{
+        background-color: rebeccapurple;
+        left: 10px;
+        top: 10px;
+    }
+}
