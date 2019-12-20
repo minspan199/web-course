@@ -68,7 +68,7 @@ export class AppComponent {
     if(this.counter.length > 4){
     return 'blue';
     } else{
-      return 'orange';
+      return 'orange';      
     }
   }
 }
