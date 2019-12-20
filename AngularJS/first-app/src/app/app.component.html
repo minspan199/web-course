@@ -1,0 +1,53 @@
+<h1>{{title}}</h1>
+<div class="container">
+  <label for="name">First Name</label>
+  <input type="text" name="name" [(ngModel)]="name">
+  <p>{{name}}   Status: {{serverStatus}}</p>
+</div>
+<h1>Input server infomation</h1>
+<!-- two-way binding -->
+<input type="text" placeholder="Server Name" [(ngModel)]="serverName">
+<!-- one-way binding -->
+<input type="text" placeholder="Server Name" [ngModel]="serverName">
+<h3>Display server information</h3>
+<p>{{serverName}}</p>
+<button>Submit</button>
+<button [disabled]="buttonState" (click)="toogleServerStatus()">Toggle Server Status</button>
+<!-- property binding and event binding -->
+<!-- <app-server></app-server> -->
+<hr>
+<div class="app-server"></div>
+<hr>
+<app-red-server></app-red-server>
+<hr>
+
+<div>
+  <label for="first-name">First Name: </label>
+  <input type="text" name = "first-name" placeholder="First Name" [(ngModel)]="first_name">
+  <p>{{first_name}}</p>
+  <button (click)="resetName()" [disabled]="isNameNull()">Reset Name</button>
+</div>
+
+<div>
+  <h1 [ngStyle]="{color: getColor()}">An example of Ng-If</h1>
+  <h2 [ngClass]="{'white': ngif_flag}">An example of ngClass</h2>
+  <p *ngIf = "ngif_flag; else elseblock">Flag is true.</p>
+  <ng-template #elseblock>
+    <p>Flag is false.</p>
+  </ng-template>
+  <button (click)="toggleFlag()">Toggle Flag</button>
+</div>
+
+
+<div>
+  <h1>Student Names</h1>
+  <input type="text" placeholder="Name" [(ngModel)]="currentName">
+  <button (click) = "addName()">Submit</button>
+  <li *ngFor="let names of studentNames">{{names}}</li>
+</div>
+
+<div>
+  <button (click) = "toggleDisplay()">Toggle Display</button>
+  <p *ngIf="toggleState">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  <p *ngFor="let clicks of counter" [ngStyle]="{color: getLength()}">{{clicks}}</p>
+</div>

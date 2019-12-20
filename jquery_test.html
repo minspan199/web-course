@@ -3,17 +3,19 @@
     <head>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js">
             </script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" 
+        <script  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" 
         integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
         crossorigin="anonymous">
         </script>
+        <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+        <script src="js/JQ_test.js"></script>
         <link rel="stylesheet" type="text/css" href="css/jquery_test.css">
         <title>JQuery Test</title>
     </head>
     <body>
-        <h1>JQuery Basics</h1>
+        <h1 id="title">JQuery Basics</h1>
         <hr>
-        <p>Pan</p>
+        <p id="subtitle">Pan</p>
         <ul>
             <li>1 <a href="google.com">Google</a></li>
             <li>2</li>
@@ -27,13 +29,56 @@
             <img src="src/puppies2.jpg">
             <img src="src/puppies3.jpg">
         </div>
-        <script>
-            let design = {
-                color:"red",
-                background:"yellow",
-                border:"solid black 3px"
+        <hr>
+        <div>
+           <input type="text" id="text1" value="" size="10">
+           <button type="button" id="submitButton">Submit</button>
+            <div>
+                <button type="button" id="addClass">add class</button>
+            </div> 
+            <div>
+                <button type="button" id="hide">Hide</button>
+                <button type="button" id="show">Show</button>
+                <button type="button" id="fadeIn">Fade In</button>
+                <button type="button" id="fadeOut">Fade Out</button>
+            </div> 
+            <div>
+                <button type="button" id="slide_up">Slide Up</button>
+                <button type="button" id="slide_down">Slide Down</button>
+            </div> 
+            <div id="div2" style="width: 40%; height: 200px; background-color: aqua;">
+                <div>
+                    <address>
+                        <a href="mailto:minxpan@gmail.com">minxpan@gmail.com</a><br>
+                        <a href="tel:+17163613188">(716) 361-3188</a>
+                    </address>
+                    <div>
+                        <p>I love web development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id = "flagColorOne" style="width: 50%; display: none; height: 100px; background-color: black; ">
+            <br>
+        </div>
+        <div id = "flagColorTwo" style="width: 50%; display: none;height: 100px; background-color: red; ">
+            <br>
+        </div>
+        <div id = "flagColorThree" style="width: 50%;display: none;height: 100px; background-color: yellow; ">
+            <br>
+        </div>
+        <div>
+            <button type="button" id="flagButton">Flag</button>
+        </div> 
+
+        <h1><span id="draggable" style="background-color: blueviolet;">Draggable</span></h1>
+        <input id="date_input" type="text" size="12">
+        <style>
+            .styleclass{
+                border: 5px solid yellowgreen;
             }
-        </script>
+        </style>
     </body>
 
 </html>
